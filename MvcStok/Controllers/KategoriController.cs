@@ -17,6 +17,7 @@ namespace MvcStok.Controllers
 
             return View(degerler);
         }
+<<<<<<< HEAD
         public ActionResult Ekleme() 
         {
             return View();
@@ -26,5 +27,7 @@ namespace MvcStok.Controllers
             return View();
         }
 
+=======
+>>>>>>> parent of 16e4048 (Add Ekleme Function)
     }
 }
