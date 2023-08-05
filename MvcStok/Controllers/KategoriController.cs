@@ -21,10 +21,5 @@ namespace MvcStok.Controllers
         {
             return View();
         }
-        public ActionResult Silme()
-        {
-            return View();
-        }
-
     }
 }
