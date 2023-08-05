@@ -17,5 +17,10 @@ namespace MvcStok.Controllers
 
             return View(degerler);
         }
+
+        public ActionResult Silme()
+        {
+            return View();
+        }
     }
 }
