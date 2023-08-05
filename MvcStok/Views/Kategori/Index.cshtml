@@ -1,0 +1,27 @@
+﻿@using MvcStok.Models.Entity
+@model List<KATEGORILER>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori ID</th> 
+        <th>Kategori ADI</th>
+    </tr>
+    <tbody>
+         @foreach(var ktgr in Model)
+            {
+                <tr>
+                    <th>@ktgr.Kategori_ID</th>
+                    <td>@ktgr.Kategori_AD</td>
+                </tr>
+            }
+            
+              
+            
+    </tbody>
+</table>
+
