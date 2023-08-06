@@ -10,6 +10,8 @@
     <tr>
         <th>Kategori ID</th> 
         <th>Kategori ADI</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
     </tr>
     <tbody>
          @foreach(var ktgr in Model)
@@ -17,6 +19,8 @@
                 <tr>
                     <th>@ktgr.Kategori_ID</th>
                     <td>@ktgr.Kategori_AD</td>
+                    <td><a href="/Kategori/Sil/@ktgr.Kategori_ID" class="btn btn-danger">Sil</a></td>
+                    <td><a href="/Kategori/Guncelle/@ktgr.Kategori_ID" class="btn btn-success">Güncelle</a></td>
                 </tr>
             }
             
@@ -24,4 +28,5 @@
             
     </tbody>
 </table>
+<a href="/Kategori/YeniKategori/" class="btn btn-primary">Yeni Kategori Ekle</a>
 

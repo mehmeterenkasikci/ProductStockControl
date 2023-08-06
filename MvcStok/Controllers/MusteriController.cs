@@ -7,26 +7,25 @@ using MvcStok.Models.Entity;
 
 namespace MvcStok.Controllers
 {
-    public class KategoriController : Controller
+    public class MusteriController : Controller
     {
-        // GET: Kategori
+        // GET: Musteri
         MvcDbStokEntities db = new MvcDbStokEntities();
         public ActionResult Index()
         {
-            var degerler = db.KATEGORILER.ToList();
-
+            var degerler = db.MUSTERILER.ToList();
             return View(degerler);
         }
         [HttpGet]
-        public ActionResult YeniKategori()
+        public ActionResult YeniMusteri()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult YeniKategori(KATEGORILER p1)
+        public ActionResult YeniMusteri(MUSTERILER p1)
         {
-            db.KATEGORILER.Add(p1);
+            db.MUSTERILER.Add(p1);
             db.SaveChanges();
             return View();
         }
