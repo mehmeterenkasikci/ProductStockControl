@@ -46,5 +46,11 @@ namespace MvcStok.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult UrunGetir(int id)
+        {
+            var urun = db.URUNLER.Find(id);
+            return View("UrunGetir", urun);
+
+        }
     }
 }

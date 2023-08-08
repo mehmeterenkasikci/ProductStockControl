@@ -11,6 +11,7 @@ namespace MvcStok.Models.Entity
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class MUSTERILER
     {
@@ -21,6 +22,9 @@ namespace MvcStok.Models.Entity
         }
     
         public int Musteri_ID { get; set; }
+
+        [Required(ErrorMessage ="Bu Alan Boþ Býrakýlamaz!")]
+        [StringLength(50,ErrorMessage ="En Fazla 50 Karakter Kullanabilirsiniz!")]
         public string Musteri_AD { get; set; }
         public string Musteri_SOYAD { get; set; }
     

@@ -1,0 +1,47 @@
+﻿@model MvcStok.Models.Entity.URUNLER
+
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@using (Html.BeginForm("Guncelle", "Urun", FormMethod.Post))
+{
+    <div class="form-group">
+        ID
+        @Html.TextBoxFor(m => m.Urun_ID, new { @class = "form-control" })
+    </div>
+    <br />
+
+    <div class="form-group">
+        Ürün Adı:
+        @Html.TextBoxFor(m => m.Urun_AD, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        Ürün Markası:
+        @Html.TextBoxFor(m => m.MARKA, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        Ürün Kategorisi:
+        @Html.TextBoxFor(m => m.Urun_KATEGORI, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        Ürün Fiyatı:
+        @Html.TextBoxFor(m => m.FIYAT, new { @class = "form-control" })
+    </div>
+    <br />
+    <div class="form-group">
+        Ürün Stoğu:
+        @Html.TextBoxFor(m => m.STOK, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <button class="btn btn-warning">Ürün Güncelle</button>
+    </div>
+}
+
+
+
