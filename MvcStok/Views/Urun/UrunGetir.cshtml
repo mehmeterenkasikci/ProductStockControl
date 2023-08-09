@@ -25,7 +25,8 @@
     <br />
     <div class="form-group">
         Ürün Kategorisi:
-        @Html.TextBoxFor(m => m.Urun_KATEGORI, new { @class = "form-control" })
+        @Html.DropDownListFor(m=>m.KATEGORILER.Kategori_ID,(List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+        @*@Html.TextBoxFor(m => m.Urun_KATEGORI, new { @class = "form-control" })*@
     </div>
     <br />
     <div class="form-group">

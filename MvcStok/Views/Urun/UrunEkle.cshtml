@@ -7,27 +7,27 @@
 <form class="form-group" method="post">
     <div>
         <label>Ürün Adı</label>
-        <input type="text" class="form-control" name="Urun_AD" />
+        <input type="text" class="form-control" name="Urun_AD" required="" maxlength="20"/>
 
     </div>
     <div>
         <label>Marka</label>
-        <input type="text" class="form-control" name="MARKA" />
+        <input type="text" class="form-control" name="MARKA" required="" placeholder="Marka Giriniz..."/>
 
     </div>
     <div>
         <label>Kategori Seçiniz</label>
-        @Html.DropDownListFor(m=>m.KATEGORILER.Kategori_ID,(List<SelectListItem>)ViewBag.dgr, new {@class="form-control" }) 
+        @Html.DropDownListFor(m=>m.KATEGORILER.Kategori_ID,(List<SelectListItem>)ViewBag.dgr, new {@class="form-control"  }) 
 
     </div>
     <div>
         <label>Fiyat</label>
-        <input type="text" class="form-control" name="FIYAT" />
+        <input type="text" class="form-control" name="FIYAT" required="" />
 
     </div>
     <div>
         <label>Stok Durumu</label>
-        <input type="text" class="form-control" name="STOK" />
+        <input type="text" class="form-control" name="STOK" required="" />
 
     </div>
 
