@@ -11,13 +11,18 @@ namespace MvcStok.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class SATISLAR
     {
         public int Satis_ID { get; set; }
+        [Required(ErrorMessage = "Bu Alan Boþ Býrakýlamaz!")]
         public Nullable<int> Urun { get; set; }
+        [Required(ErrorMessage = "Bu Alan Boþ Býrakýlamaz!")]
         public Nullable<int> Musteri { get; set; }
+        [Required(ErrorMessage = "Bu Alan Boþ Býrakýlamaz!")]
         public Nullable<byte> Adet { get; set; }
+        [Required(ErrorMessage = "Bu Alan Boþ Býrakýlamaz!")]
         public Nullable<decimal> Fiyat { get; set; }
     
         public virtual MUSTERILER MUSTERILER { get; set; }

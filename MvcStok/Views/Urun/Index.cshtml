@@ -6,34 +6,41 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 }
 
-<table class="table table-bordered">
-    <tr>
-        <th>Ürün Id</th>
-        <th>Ürün Adı</th>
-        <th>Markası</th>
-        <th>Kategori</th>
-        <th>Fiyat</th>
-        <th>Stok</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
-    </tr>
-    <tbody>
-            @foreach(var urn in Model)
-            {
+<table id="tbl1" class="table table-bordered">
+    <thead>
         <tr>
-            <td>@urn.Urun_ID</td>
-            <td>@urn.Urun_AD</td>
-            <td>@urn.MARKA</td>
-            <td>@urn.KATEGORILER.Kategori_AD</td>
-            <td>@urn.FIYAT</td>
-            <td>@urn.STOK</td>
-            <td><a href="/Urun/Sil/@urn.Urun_ID" class="btn btn-danger">Sil</a></td>
-            <td>
-                <a href="/Urun/UrunGetir/@urn.Urun_ID" class="btn btn-success">Güncelle</a>
-            </td>
-
+            <th>Ürün Id</th>
+            <th>Ürün Adı</th>
+            <th>Markası</th>
+            <th>Kategori</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            <th>Sil</th>
+            <th>Güncelle</th>
         </tr>
-            }
+    </thead>
+    <tbody>
+        @foreach (var urn in Model)
+        {
+            <tr>
+                <td>@urn.Urun_ID</td>
+                <td>@urn.Urun_AD</td>
+                <td>@urn.MARKA</td>
+                <td>@urn.KATEGORILER.Kategori_AD</td>
+                <td>@urn.FIYAT</td>
+                <td>@urn.STOK</td>
+                <td><a href="/Urun/Sil/@urn.Urun_ID" class="btn btn-danger">Sil</a></td>
+                <td>
+                    <a href="/Urun/UrunGetir/@urn.Urun_ID" class="btn btn-success">Güncelle</a>
+                </td>
+
+            </tr>
+        }
     </tbody>
 </table>
 <a href="/Urun/UrunEkle/" class="btn btn-primary">Yeni Ürün Ekle</a>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<link href="~/Content/DataTables/css/dataTables.foundation.css" rel="stylesheet" />
+<script>
+    $('#tbl1').DataTable();
+</script>
