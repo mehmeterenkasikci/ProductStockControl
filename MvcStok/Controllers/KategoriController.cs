@@ -35,7 +35,7 @@ namespace MvcStok.Controllers
             }
             db.KATEGORILER.Add(p1);
             db.SaveChanges();
-            return View("Index");
+            return RedirectToAction("Index");
         }
         public ActionResult Sil(int id)
         {

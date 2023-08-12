@@ -15,6 +15,7 @@ namespace MvcStok.Models.Entity
 
     public partial class SATISLAR
     {
+        [Required(ErrorMessage = "Bu Alan Boþ Býrakýlamaz!")]
         public int Satis_ID { get; set; }
         [Required(ErrorMessage = "Bu Alan Boþ Býrakýlamaz!")]
         public Nullable<int> Urun { get; set; }

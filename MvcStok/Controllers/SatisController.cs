@@ -15,21 +15,21 @@ namespace MvcStok.Controllers
         {
             return View();
         }
-        [HttpGet]
-        public ActionResult YeniSatis()
-        {
-            return View("Index");
-        }
+        //[HttpGet]
+        //public ActionResult YeniSatis()
+        //{
+        //    return View("Index");
+        //}
         [HttpPost]
         public ActionResult YeniSatis(SATISLAR p)
         {
             if(!ModelState.IsValid)
             {
-                return View("YeniSatis");
+                return View("Index");
             }
             db.SATISLAR.Add(p);
             db.SaveChanges();
-            return View("Index");
+            return RedirectToAction("Index");
         }
     }
 }
